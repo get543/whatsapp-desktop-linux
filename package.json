@@ -7,18 +7,25 @@
     "dist": "tsc",
     "watch": "tsc -w",
     "lint": "eslint -c .eslintrc --ext .ts ./src",
+    "clean": "npm prune",
+    "format": "prettier --write .",
     "start": "npm run dist && electron .",
     "build": "npm run dist && electron-builder"
   },
   "author": "Alberto Mimbrero",
+  "homepage": "https://github.com/mimbrero/whatsapp-desktop-linux#readme",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mimbrero/whatsapp-desktop-linux.git"
+  },
   "dependencies": {
     "electron-store": "^8.1.0"
   },
   "devDependencies": {
-    "electron": "^21.0.1",
-    "electron-builder": "^23.3.3",
-    "typescript": "^4.8.4"
+    "electron": "^25.2.0",
+    "electron-builder": "^23.4.0",
+    "typescript": "^5.1.3"
   },
   "build": {
     "appId": "io.github.mimbrero.WhatsAppDesktop",
@@ -31,6 +38,13 @@
     ],
     "extraFiles": [
       "data"
-    ]
+    ],
+    "linux": {
+      "target": [
+        "dir"
+      ],
+      "icon": "./data/icons/hicolor/512x512/apps/WhatsAppDesktop.png",
+      "category": "Network"
+    }
   }
 }

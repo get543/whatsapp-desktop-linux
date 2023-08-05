@@ -6,3 +6,22 @@ dist/
 
 # Electron builder output
 build/
+
+# Log files
+logs/
+
+# Miscellaneous
+Backups/
+blob_storage/
+Cache/
+CachedData/
+Code Cache/
+Crashpad/
+DawnCache/
+Dictionaries/
+GPUCache/
+Local Storage/
+Session Storage/
+User/
+Preferences
+package.json_backup.txt
